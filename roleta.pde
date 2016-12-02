@@ -180,7 +180,7 @@ void roda() {
 void clica() {
   image(voltar, width*0.1, height*0.9);
   if (mouseX>width*0.1-(voltar.width/2) && mouseX<width*0.1+(voltar.width/2) && mouseY>height*0.9-(voltar.height/2) && mouseY<height*0.9+(voltar.height/2)) {
-    image(voltar2, 100, 700);
+    image(voltar2,  width*0.1, height*0.9);
   }
   if (mousePressed && mouseX>width*0.1-(voltar.width/2) && mouseX<width*0.1+(voltar.width/2) && mouseY>height*0.9-(voltar.height/2) && mouseY<height*0.9+(voltar.height/2)) {
     if (i<4) {
