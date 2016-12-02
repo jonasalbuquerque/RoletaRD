@@ -48,7 +48,7 @@ void setup() {
 
   imageMode(CENTER);
 
-  x = width/2+300;
+  x = width*0.75;
   y = height/2;
 }
 
@@ -61,7 +61,7 @@ void draw() {
     if (RODA == false) {
       image(roleta, x, y);
       image(up, 350, height/2+100);
-      image(seta, 640, 400);
+      image(seta, x-(roleta.width/2), height/2);
     }
 
     if (mousePressed && mouseX>350-(up.width/2) && mouseX<350+(up.width/2) && mouseY>height/2+100-(up.height/2) && mouseY<height/2+100+(up.height/2)) {
@@ -174,15 +174,15 @@ void roda() {
   image(roleta, 0, 0);
   popMatrix();
 
-  image(seta, 640, 400);
+  image(seta,x-(roleta.width/2), height/2);
 }  
 
 void clica() {
-  image(voltar, 100, 700);
-  if (mouseX>100-(voltar.width/2) && mouseX<100+(voltar.width/2) && mouseY>700-(voltar.height/2) && mouseY<700+(voltar.height/2)) {
+  image(voltar, width*0.1, height*0.9);
+  if (mouseX>width*0.1-(voltar.width/2) && mouseX<width*0.1+(voltar.width/2) && mouseY>height*0.9-(voltar.height/2) && mouseY<height*0.9+(voltar.height/2)) {
     image(voltar2, 100, 700);
   }
-  if (mousePressed && mouseX>100-(voltar.width/2) && mouseX<100+(voltar.width/2) && mouseY>700-(voltar.height/2) && mouseY<700+(voltar.height/2)) {
+  if (mousePressed && mouseX>width*0.1-(voltar.width/2) && mouseX<width*0.1+(voltar.width/2) && mouseY>height*0.9-(voltar.height/2) && mouseY<height*0.9+(voltar.height/2)) {
     if (i<4) {
       angle= 0;
       inc = 0;
